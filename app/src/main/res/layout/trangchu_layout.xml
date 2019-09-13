@@ -2,59 +2,56 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorwhite"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <com.google.android.material.appbar.AppBarLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:background="@color/bgToolbar"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/bgsearch">
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:src="@mipmap/logofahasa"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
         <LinearLayout
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
+            android:background="@drawable/bgsearch"
+            android:orientation="horizontal">
+            <ImageButton
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:src="@drawable/ic_drawer"
+                android:background="@color/colorwhite"
+                />
+            <EditText
+                android:layout_marginLeft="10dp"
+                android:id="@+id/editText2"
+                android:drawableLeft="@drawable/ic_search"
+                android:background="@drawable/border"
                 android:layout_width="match_parent"
-
-                android:layout_height="match_parent"/>
-            <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_marginRight="10dp"
                 android:layout_height="wrap_content"
+                android:hint="Sản phẩm cần tìm..."/>
+            <View android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/bgToolbar"/>
 
-                android:orientation="horizontal">
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="Tìm kiếm trên LAZADA"
-                    android:layout_gravity="center"
-                    android:textAllCaps="false"
-                    android:textSize="20dp"
-                    android:layout_weight="1"
-                    android:background="@color/colorwhite"
-                    android:textAlignment="viewStart"
-                    android:layout_marginLeft="10dp"
-                    tools:ignore="RtlCompat" />
-                <View android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@color/bgToolbar"/>
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="10dp"
-                    android:background="@color/colorwhite"
-                   />
-            </LinearLayout>
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabs"
-                android:layout_width="match_parent"
-                app:tabMode="scrollable"
-                android:layout_height="wrap_content"/>
         </LinearLayout>
-    </com.google.android.material.appbar.AppBarLayout>
+    </LinearLayout>
     <androidx.viewpager.widget.ViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"

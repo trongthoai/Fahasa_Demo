@@ -15,8 +15,8 @@ import com.example.fahasa.R;
 import com.google.android.material.tabs.TabLayout;
 
 public class TrangChuActivity extends AppCompatActivity {
-    Toolbar toolbar;
-    TabLayout tabLayout;
+
+
     ViewPager viewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,26 +25,16 @@ public class TrangChuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.trangchu_layout);
 
-        toolbar = findViewById(R.id.toolbar);
-        tabLayout = findViewById(R.id.tabs);
-        viewPager = findViewById(R.id.viewpager);
-
-        setSupportActionBar(toolbar);
-
-        tabLayout.setupWithViewPager(viewPager);
 
 
 
-    }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menutrangchu,menu);
-        return true;
-    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        return super.onOptionsItemSelected(item);
+
+
+
+
+
+
+
     }
 
 }
